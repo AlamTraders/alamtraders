@@ -3459,3 +3459,492 @@ textarea{
 }
 
 }
+/*==================================================
+        ALAM TRADERS ANIMATION CSS
+==================================================*/
+
+
+
+
+
+/*====================================
+        FADE IN UP
+=====================================*/
+
+@keyframes fadeInUp{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        FADE IN LEFT
+=====================================*/
+
+@keyframes fadeInLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        FADE IN RIGHT
+=====================================*/
+
+@keyframes fadeInRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        ZOOM IN
+=====================================*/
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        FLOATING
+=====================================*/
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        PULSE
+=====================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        ROTATE
+=====================================*/
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        BUTTON SHINE
+=====================================*/
+
+@keyframes shine{
+
+    from{
+
+        left:-100%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        HERO
+=====================================*/
+
+.hero-content{
+
+    animation:fadeInLeft 1s ease;
+
+}
+
+.hero-image{
+
+    animation:fadeInRight 1s ease;
+
+}
+
+
+
+
+
+/*====================================
+        SECTION TITLES
+=====================================*/
+
+.section-heading{
+
+    animation:fadeInUp .8s ease;
+
+}
+
+
+
+
+
+/*====================================
+        COMMON CARDS
+=====================================*/
+
+.product-card,
+
+.gallery-item,
+
+.video-card,
+
+.testimonial-card,
+
+.value-card,
+
+.industry-card,
+
+.process-card,
+
+.strength-card,
+
+.office-card,
+
+.info-card,
+
+.certificate-card{
+
+    animation:zoomIn .6s ease;
+
+}
+
+
+
+
+
+/*====================================
+        FLOATING IMAGE
+=====================================*/
+
+.hero-image img,
+
+.manufacturing-image img{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+
+
+
+
+/*====================================
+        PLAY BUTTON
+=====================================*/
+
+.play-button{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+
+
+/*====================================
+        ICON ROTATION
+=====================================*/
+
+.icon-box:hover i,
+
+.value-card:hover i,
+
+.strength-card:hover i,
+
+.category-card:hover i{
+
+    animation:rotate360 .7s linear;
+
+}
+
+
+
+
+
+/*====================================
+        BUTTON SHINE EFFECT
+=====================================*/
+
+.btn-primary,
+
+.btn-secondary{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn-primary::before,
+
+.btn-secondary::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:40px;
+
+    height:100%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+}
+
+.btn-primary:hover::before,
+
+.btn-secondary:hover::before{
+
+    animation:shine .8s;
+
+}
+
+
+
+
+
+/*====================================
+        GALLERY HOVER
+=====================================*/
+
+.gallery-item{
+
+    position:relative;
+
+}
+
+.gallery-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.gallery-item:hover::after{
+
+    opacity:1;
+
+}
+
+
+
+
+
+/*====================================
+        VIDEO HOVER
+=====================================*/
+
+.video-card{
+
+    position:relative;
+
+}
+
+.video-card:hover .play-button{
+
+    transform:translate(-50%,-50%) scale(1.15);
+
+}
+
+
+
+
+
+/*====================================
+        FLOATING BUTTONS
+=====================================*/
+
+.floating-whatsapp{
+
+    animation:pulse 2s infinite;
+
+}
+
+.back-to-top:hover{
+
+    animation:floating .8s ease;
+
+}
+
+
+
+
+
+/*====================================
+        SMOOTH TRANSITIONS
+=====================================*/
+
+*{
+
+    transition:
+
+    background .3s ease,
+
+    color .3s ease,
+
+    border-color .3s ease,
+
+    box-shadow .3s ease,
+
+    transform .3s ease;
+
+}
