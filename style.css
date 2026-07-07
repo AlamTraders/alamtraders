@@ -2154,3 +2154,454 @@ p{
     border-radius:16px;
 
 }
+/*====================================
+        CONTACT SECTION
+=====================================*/
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+.contact-form{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-form h3{
+
+    margin-bottom:30px;
+
+    font-size:30px;
+
+}
+
+.contact-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+
+
+/*====================================
+        FORM ELEMENTS
+=====================================*/
+
+.contact-form input,
+.contact-form textarea,
+.quote-form input,
+.quote-form textarea,
+.quote-form select{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:var(--transition);
+
+    background:#fff;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.quote-form input:focus,
+.quote-form textarea:focus,
+.quote-form select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(198,40,40,.08);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+
+
+
+
+/*====================================
+        CONTACT INFO
+=====================================*/
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.info-card{
+
+    padding:30px;
+
+    text-align:left;
+
+}
+
+.info-card i{
+
+    font-size:36px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.info-card h3{
+
+    margin-bottom:12px;
+
+}
+
+.info-card a{
+
+    color:var(--dark);
+
+    font-weight:600;
+
+}
+
+.info-card small{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:var(--text);
+
+}
+
+
+
+
+
+/*====================================
+        QUOTE FORM
+=====================================*/
+
+.quote-form{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/*====================================
+        OFFICE DETAILS
+=====================================*/
+
+.office-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.office-card{
+
+    padding:35px 30px;
+
+    text-align:center;
+
+}
+
+.office-card i{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.office-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/*====================================
+        GOOGLE MAP
+=====================================*/
+
+.google-map{
+
+    overflow:hidden;
+
+}
+
+.google-map iframe{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+    display:block;
+
+}
+
+
+
+
+
+/*====================================
+        FAQ
+=====================================*/
+
+.faq-wrapper{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.faq-item{
+
+    background:#fff;
+
+    padding:28px 30px;
+
+    border-radius:14px;
+
+    margin-bottom:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.faq-item h3{
+
+    margin-bottom:14px;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+/*====================================
+        BUSINESS HIGHLIGHTS
+=====================================*/
+
+.highlights-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.highlight-card{
+
+    background:#fff;
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.highlight-card i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.highlight-card h3{
+
+    font-size:22px;
+
+}
+
+
+
+
+
+/*====================================
+        FLOATING BUTTONS
+=====================================*/
+
+.floating-buttons{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    z-index:999;
+
+}
+
+.floating-whatsapp,
+.floating-call,
+.back-to-top{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    transition:var(--transition);
+
+}
+
+.floating-whatsapp{
+
+    background:#25D366;
+
+}
+
+.floating-call{
+
+    background:var(--primary);
+
+}
+
+.back-to-top{
+
+    background:var(--dark);
+
+    border:none;
+
+}
+
+.floating-whatsapp:hover,
+.floating-call:hover,
+.back-to-top:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+}
+
+
+
+
+
+/*====================================
+        CONTACT PAGE UTILITIES
+=====================================*/
+
+.contact-page,
+.quote-section,
+.office-details{
+
+    background:#fff;
+
+}
+
+.business-highlights{
+
+    background:var(--light);
+
+}
