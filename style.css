@@ -814,3 +814,435 @@ p{
     margin-bottom:20px;
 
 }
+/*====================================
+            HERO SECTION
+=====================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#f8f8f8;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(rgba(17,17,17,.55),
+    rgba(17,17,17,.45));
+
+    z-index:1;
+
+}
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    color:#fff;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+}
+
+.hero-title{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+}
+
+.hero-title span{
+
+    color:var(--secondary);
+
+}
+
+.hero-description{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+    color:#f3f3f3;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+
+
+
+
+/*====================================
+        HERO FEATURES
+=====================================*/
+
+.hero-features{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.hero-feature i{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+}
+
+
+
+
+
+/*====================================
+        ABOUT SECTION
+=====================================*/
+
+.about-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.about-content p{
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+}
+
+
+
+
+
+/*====================================
+        ABOUT FEATURES
+=====================================*/
+
+.about-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+.about-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:600;
+
+}
+
+.about-list i{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/*====================================
+        COMPANY STATS
+=====================================*/
+
+.stats{
+
+    background:var(--dark);
+
+    padding:90px 0;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    background:#1c1c1c;
+
+    border-radius:15px;
+
+}
+
+.stat-card h2{
+
+    color:var(--secondary);
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#ddd;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/*====================================
+        CTA SECTION
+=====================================*/
+
+.cta{
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--primary-dark));
+
+    padding:90px 0;
+
+}
+
+.cta-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta-content{
+
+    max-width:700px;
+
+}
+
+.cta-content span{
+
+    display:inline-block;
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+.cta-content h2{
+
+    color:#fff;
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+}
+
+.cta-content p{
+
+    color:#f2f2f2;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+
+/*====================================
+        COMMON ICON BOX
+=====================================*/
+
+.icon-box{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(198,40,40,.1);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
