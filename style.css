@@ -2605,3 +2605,408 @@ textarea{
     background:var(--light);
 
 }
+/*====================================
+            FOOTER
+=====================================*/
+
+.footer{
+
+    background:var(--dark);
+
+    color:#d8d8d8;
+
+    padding:90px 0 0;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER GRID
+=====================================*/
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    gap:50px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER LOGO
+=====================================*/
+
+.footer-logo{
+
+    width:220px;
+
+    margin-bottom:25px;
+
+}
+
+.footer-column p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER HEADINGS
+=====================================*/
+
+.footer-column h3{
+
+    color:#fff;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+    padding-bottom:12px;
+
+}
+
+.footer-column h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:60px;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    border-radius:10px;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER LINKS
+=====================================*/
+
+.footer-column ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer-column ul li{
+
+    list-style:none;
+
+}
+
+.footer-column ul li a{
+
+    color:#d6d6d6;
+
+    transition:var(--transition);
+
+}
+
+.footer-column ul li a:hover{
+
+    color:var(--secondary);
+
+    padding-left:8px;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER CONTACT
+=====================================*/
+
+.footer-column p{
+
+    margin-bottom:15px;
+
+}
+
+.footer-column p i{
+
+    color:var(--secondary);
+
+    margin-right:10px;
+
+    width:20px;
+
+}
+
+.footer-column p a{
+
+    color:#d6d6d6;
+
+}
+
+.footer-column p a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+
+
+/*====================================
+        SOCIAL ICONS
+=====================================*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.footer-social a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:var(--transition);
+
+}
+
+.footer-social a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+/*====================================
+        NEWSLETTER
+=====================================*/
+
+.newsletter{
+
+    margin-top:30px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    margin-top:15px;
+
+}
+
+.newsletter input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px 0 0 10px;
+
+}
+
+.newsletter button{
+
+    padding:15px 24px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:0 10px 10px 0;
+
+    font-weight:600;
+
+}
+
+.newsletter button:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER BOTTOM
+=====================================*/
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:28px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom p{
+
+    color:#bdbdbd;
+
+}
+
+
+
+
+
+/*====================================
+        FOOTER BOTTOM LINKS
+=====================================*/
+
+.footer-links{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+    color:#bdbdbd;
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+
+
+
+/*====================================
+        COPYRIGHT
+=====================================*/
+
+.copyright{
+
+    text-align:center;
+
+    padding:18px;
+
+    background:#0a0a0a;
+
+    color:#9e9e9e;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/*====================================
+        COMMON FOOTER SPACING
+=====================================*/
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer-column:last-child{
+
+    gap:10px;
+
+}
+
+
+
+
+
+/*====================================
+        HOVER IMPROVEMENTS
+=====================================*/
+
+.footer-column ul li a,
+
+.footer-links a,
+
+.footer-social a{
+
+    transition:all .3s ease;
+
+}
