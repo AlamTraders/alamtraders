@@ -228,3 +228,217 @@ function activeNavigation() {
     });
 
 }
+/*====================================
+        SCROLL REVEAL
+=====================================*/
+
+function scrollReveal() {
+
+    const elements = document.querySelectorAll(
+
+        ".section-heading, .product-card, .gallery-item, .video-card, .testimonial-card, .value-card, .industry-card, .process-card, .strength-card, .office-card, .info-card, .certificate-card"
+
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.15
+
+    });
+
+    elements.forEach(element => {
+
+        element.style.opacity = "0";
+
+        element.style.transform = "translateY(40px)";
+
+        element.style.transition = "all .7s ease";
+
+        observer.observe(element);
+
+    });
+
+}
+
+scrollReveal();
+
+
+
+
+
+/*====================================
+        COUNTER ANIMATION
+=====================================*/
+
+function counterAnimation() {
+
+    const counters = document.querySelectorAll(".counter");
+
+    if (!counters.length) return;
+
+    counters.forEach(counter => {
+
+        const target = parseInt(counter.dataset.target);
+
+        let current = 0;
+
+        const speed = target / 120;
+
+        const update = () => {
+
+            current += speed;
+
+            if (current < target) {
+
+                counter.innerText = Math.ceil(current);
+
+                requestAnimationFrame(update);
+
+            } else {
+
+                counter.innerText = target + "+";
+
+            }
+
+        };
+
+        update();
+
+    });
+
+}
+
+counterAnimation();
+
+
+
+
+
+/*====================================
+        FAQ ACCORDION
+=====================================*/
+
+function faqAccordion() {
+
+    const items = document.querySelectorAll(".faq-item");
+
+    if (!items.length) return;
+
+    items.forEach(item => {
+
+        const answer = item.querySelector("p");
+
+        if (!answer) return;
+
+        answer.style.display = "none";
+
+        item.addEventListener("click", () => {
+
+            const opened = answer.style.display === "block";
+
+            document.querySelectorAll(".faq-item p").forEach(p => {
+
+                p.style.display = "none";
+
+            });
+
+            answer.style.display = opened ? "none" : "block";
+
+        });
+
+    });
+
+}
+
+faqAccordion();
+
+
+
+
+
+/*====================================
+        GALLERY LIGHTBOX
+=====================================*/
+
+function galleryLightbox() {
+
+    const images = document.querySelectorAll(".gallery-item img");
+
+    if (!images.length) return;
+
+    const overlay = document.createElement("div");
+
+    overlay.id = "lightbox";
+
+    overlay.style.cssText = `
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.9);
+        display:none;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+        cursor:pointer;
+    `;
+
+    const image = document.createElement("img");
+
+    image.style.cssText = `
+        max-width:90%;
+        max-height:90%;
+        border-radius:12px;
+    `;
+
+    overlay.appendChild(image);
+
+    document.body.appendChild(overlay);
+
+    images.forEach(img => {
+
+        img.addEventListener("click", () => {
+
+            image.src = img.src;
+
+            overlay.style.display = "flex";
+
+        });
+
+    });
+
+    overlay.addEventListener("click", () => {
+
+        overlay.style.display = "none";
+
+    });
+
+}
+
+galleryLightbox();
+
+
+
+
+
+/*====================================
+        PAGE LOADER
+=====================================*/
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
