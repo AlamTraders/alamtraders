@@ -887,3 +887,261 @@ window.addEventListener("pageshow", () => {
     document.body.classList.remove("loading");
 
 });
+/*====================================
+        PRELOADER
+=====================================*/
+
+function hidePreloader() {
+
+    const loader = document.querySelector(".preloader");
+
+    if (!loader) return;
+
+    window.addEventListener("load", () => {
+
+        loader.style.opacity = "0";
+
+        loader.style.visibility = "hidden";
+
+        setTimeout(() => {
+
+            loader.remove();
+
+        }, 500);
+
+    });
+
+}
+
+hidePreloader();
+
+
+
+
+
+/*====================================
+        IMAGE ERROR FALLBACK
+=====================================*/
+
+function imageFallback() {
+
+    document.querySelectorAll("img").forEach(image => {
+
+        image.addEventListener("error", function () {
+
+            this.src = "images/placeholder.webp";
+
+        });
+
+    });
+
+}
+
+imageFallback();
+
+
+
+
+
+/*====================================
+        EXTERNAL LINKS
+=====================================*/
+
+function externalLinks() {
+
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+
+        link.setAttribute("target", "_blank");
+
+        link.setAttribute("rel", "noopener noreferrer");
+
+    });
+
+}
+
+externalLinks();
+
+
+
+
+
+/*====================================
+        DISABLE EMPTY LINKS
+=====================================*/
+
+document.querySelectorAll('a[href="#"]').forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+    });
+
+});
+
+
+
+
+
+/*====================================
+        BUTTON RIPPLE EFFECT
+=====================================*/
+
+document.querySelectorAll(".btn-primary,.btn-secondary").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        ripple.className = "ripple";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
+
+});
+
+
+
+
+
+/*====================================
+        PAGE VISIBILITY
+=====================================*/
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden) {
+
+        document.title = "Come Back | Alam Traders";
+
+    } else {
+
+        document.title = "Alam Traders Pvt. Ltd.";
+
+    }
+
+});
+
+
+
+
+
+/*====================================
+        DEVELOPER MESSAGE
+=====================================*/
+
+console.clear();
+
+console.log("%cAlam Traders Pvt. Ltd.",
+"color:#c62828;font-size:24px;font-weight:bold;");
+
+console.log("%cIndustrial Packaging Solutions",
+"color:#444;font-size:15px;");
+
+console.log("%cWebsite Developed with HTML • CSS • JavaScript",
+"color:#777;font-size:13px;");
+
+
+
+
+
+/*====================================
+        GLOBAL ERROR HANDLER
+=====================================*/
+
+window.addEventListener("error", function (event) {
+
+    console.warn("Website Error :", event.message);
+
+});
+
+
+
+
+
+/*====================================
+        UNHANDLED PROMISES
+=====================================*/
+
+window.addEventListener("unhandledrejection", function (event) {
+
+    console.warn("Promise Error :", event.reason);
+
+});
+
+
+
+
+
+/*====================================
+        GLOBAL UTILITIES
+=====================================*/
+
+const Utils = {
+
+    qs(selector) {
+
+        return document.querySelector(selector);
+
+    },
+
+    qsa(selector) {
+
+        return document.querySelectorAll(selector);
+
+    },
+
+    scrollTop() {
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+};
+
+window.Utils = Utils;
+
+
+
+
+
+/*====================================
+        WEBSITE READY
+=====================================*/
+
+window.addEventListener("load", () => {
+
+    console.log("Website Loaded Successfully.");
+
+});
+
+
+
+
+
+/*====================================
+        END OF FILE
+=====================================*/
