@@ -1703,3 +1703,454 @@ p{
     font-size:20px;
 
 }
+/*====================================
+        MANUFACTURING SECTION
+=====================================*/
+
+.manufacturing{
+
+    background:var(--light);
+
+}
+
+.manufacturing-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.manufacturing-image img{
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.manufacturing-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.manufacturing-content p{
+
+    margin-bottom:20px;
+
+}
+
+.manufacturing-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.manufacturing-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:600;
+
+}
+
+.manufacturing-item i{
+
+    color:var(--primary);
+
+    font-size:20px;
+
+}
+
+
+
+
+
+/*====================================
+        INFRASTRUCTURE
+=====================================*/
+
+.infrastructure-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.infra-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.infra-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.infra-card img{
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.infra-card h3{
+
+    padding:25px 25px 10px;
+
+}
+
+.infra-card p{
+
+    padding:0 25px 25px;
+
+}
+
+
+
+
+
+/*====================================
+        GALLERY
+=====================================*/
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+/*====================================
+        VIDEO GALLERY
+=====================================*/
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.video-card{
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.video-card img{
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.video-card h3{
+
+    padding:20px;
+
+}
+
+.play-button{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:70px;
+
+    height:70px;
+
+    background:rgba(198,40,40,.9);
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+}
+
+
+
+
+
+/*====================================
+        TESTIMONIALS
+=====================================*/
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+
+}
+
+.testimonial-card{
+
+    padding:35px;
+
+}
+
+.stars{
+
+    color:#ffc107;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.client-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.client-info img{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.client-info h4{
+
+    margin-bottom:4px;
+
+}
+
+
+
+
+
+/*====================================
+        CERTIFICATIONS
+=====================================*/
+
+.certificate-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.certificate-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.certificate-card i{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin-bottom:22px;
+
+}
+
+.certificate-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/*====================================
+        PHOTO CATEGORIES
+=====================================*/
+
+.categories-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+}
+
+.category-card{
+
+    text-align:center;
+
+    padding:35px 25px;
+
+}
+
+
+
+
+
+/*====================================
+        COMMON HOVER EFFECT
+=====================================*/
+
+.product-card:hover,
+
+.video-card:hover,
+
+.gallery-item:hover,
+
+.industry-card:hover,
+
+.infra-card:hover,
+
+.value-card:hover,
+
+.certificate-card:hover,
+
+.process-card:hover,
+
+.stat-card:hover{
+
+    transition:var(--transition);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+
+
+/*====================================
+        IMAGE RADIUS
+=====================================*/
+
+.gallery-item img,
+
+.video-card img,
+
+.infra-card img,
+
+.product-card img,
+
+.manufacturing-image img{
+
+    border-radius:16px;
+
+}
