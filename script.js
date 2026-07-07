@@ -442,3 +442,213 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 
 });
+/*====================================
+        VIDEO POPUP
+=====================================*/
+
+function videoPopup() {
+
+    const cards = document.querySelectorAll(".video-card");
+
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const video = card.dataset.video;
+
+            if (!video) return;
+
+            window.open(video, "_blank");
+
+        });
+
+    });
+
+}
+
+videoPopup();
+
+
+
+
+
+/*====================================
+        CONTACT FORM VALIDATION
+=====================================*/
+
+function contactFormValidation() {
+
+    const form = document.querySelector(".contact-form form");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const name = form.querySelector('input[type="text"]');
+
+        const phone = form.querySelector('input[type="tel"]');
+
+        const email = form.querySelector('input[type="email"]');
+
+        if(name.value.trim().length < 3){
+
+            alert("Please enter your full name.");
+
+            name.focus();
+
+            return;
+
+        }
+
+        if(phone.value.trim().length < 10){
+
+            alert("Please enter a valid mobile number.");
+
+            phone.focus();
+
+            return;
+
+        }
+
+        if(email.value.trim() !== "" &&
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+
+            alert("Please enter a valid email address.");
+
+            email.focus();
+
+            return;
+
+        }
+
+        alert("Thank you! Your enquiry has been submitted.");
+
+        form.reset();
+
+    });
+
+}
+
+contactFormValidation();
+
+
+
+
+
+/*====================================
+        QUOTE FORM VALIDATION
+=====================================*/
+
+function quoteFormValidation(){
+
+    const form = document.querySelector(".quote-form");
+
+    if(!form) return;
+
+    form.addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        const phone=form.querySelector('input[type="tel"]');
+
+        if(phone.value.trim().length<10){
+
+            alert("Please enter a valid mobile number.");
+
+            phone.focus();
+
+            return;
+
+        }
+
+        alert("Quotation request submitted successfully.");
+
+        form.reset();
+
+    });
+
+}
+
+quoteFormValidation();
+
+
+
+
+
+/*====================================
+        BUTTON CLICK EFFECT
+=====================================*/
+
+document.querySelectorAll(".btn-primary,.btn-secondary").forEach(button=>{
+
+    button.addEventListener("click",function(){
+
+        this.classList.add("loading");
+
+        setTimeout(()=>{
+
+            this.classList.remove("loading");
+
+        },700);
+
+    });
+
+});
+
+
+
+
+
+/*====================================
+        CLOSE MOBILE MENU
+=====================================*/
+
+document.addEventListener("click",function(e){
+
+    const nav=document.querySelector(".navbar");
+
+    const toggle=document.querySelector(".menu-toggle");
+
+    if(!nav || !toggle) return;
+
+    if(!nav.contains(e.target) && !toggle.contains(e.target)){
+
+        nav.classList.remove("active");
+
+        toggle.classList.remove("active");
+
+    }
+
+});
+
+
+
+
+
+/*====================================
+        ESC KEY SUPPORT
+=====================================*/
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        const nav=document.querySelector(".navbar");
+
+        const toggle=document.querySelector(".menu-toggle");
+
+        const lightbox=document.getElementById("lightbox");
+
+        if(nav) nav.classList.remove("active");
+
+        if(toggle) toggle.classList.remove("active");
+
+        if(lightbox) lightbox.style.display="none";
+
+    }
+
+});
