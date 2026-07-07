@@ -395,3 +395,422 @@ p{
     color:var(--text);
 
 }
+/*====================================
+            TOP BAR
+=====================================*/
+
+.top-bar{
+
+    background:var(--dark);
+
+    color:var(--white);
+
+    font-size:14px;
+
+    padding:10px 0;
+
+}
+
+.top-bar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.top-left,
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.top-left a,
+.top-right span{
+
+    color:var(--white);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:var(--transition);
+
+}
+
+.top-left a:hover{
+
+    color:var(--secondary);
+
+}
+
+.top-left i,
+.top-right i{
+
+    color:var(--secondary);
+
+}
+
+
+
+
+
+/*====================================
+            HEADER
+=====================================*/
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(255,255,255,.98);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+
+    box-shadow:0 2px 20px rgba(0,0,0,.05);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:90px;
+
+}
+
+
+
+
+
+/*====================================
+            LOGO
+=====================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:180px;
+
+    height:auto;
+
+}
+
+
+
+
+
+/*====================================
+            NAVIGATION
+=====================================*/
+
+.navbar ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.navbar ul li{
+
+    position:relative;
+
+}
+
+.navbar ul li a{
+
+    color:var(--dark);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.navbar ul li a:hover{
+
+    color:var(--primary);
+
+}
+
+.navbar ul li a.active{
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+/*====================================
+        NAV UNDERLINE EFFECT
+=====================================*/
+
+.navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.navbar ul li a:hover::after,
+
+.navbar ul li a.active::after{
+
+    width:100%;
+
+}
+
+
+
+
+
+/*====================================
+            PAGE BANNER
+=====================================*/
+
+.page-banner{
+
+    padding:90px 0;
+
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../images/banner/page-banner.webp") center center/cover no-repeat;
+
+    text-align:center;
+
+}
+
+.page-banner h1{
+
+    color:var(--white);
+
+    font-size:54px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+.page-banner p{
+
+    color:#f1f1f1;
+
+    font-size:18px;
+
+}
+
+.page-banner span{
+
+    color:var(--secondary);
+
+}
+
+
+
+
+
+/*====================================
+            MOBILE MENU
+=====================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:28px;
+
+    color:var(--dark);
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/*====================================
+            STICKY HEADER
+=====================================*/
+
+.header.scrolled{
+
+    min-height:80px;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.10);
+
+    transition:var(--transition);
+
+}
+
+.header.scrolled .container{
+
+    min-height:80px;
+
+}
+
+
+
+
+
+/*====================================
+            COMMON LINKS
+=====================================*/
+
+.footer a,
+.contact-info a{
+
+    transition:var(--transition);
+
+}
+
+.footer a:hover,
+.contact-info a:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+/*====================================
+            COMMON ICONS
+=====================================*/
+
+.info-card i,
+.office-card i,
+.category-card i,
+.why-card i,
+.strength-card i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/*====================================
+            COMMON GRID
+=====================================*/
+
+.products-grid,
+.gallery-grid,
+.video-grid,
+.categories-grid,
+.office-grid,
+.why-grid,
+.strength-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+
+/*====================================
+            COMMON CARD
+=====================================*/
+
+.product-card,
+.gallery-item,
+.video-card,
+.office-card,
+.category-card,
+.why-card,
+.strength-card{
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+.product-card h3,
+.video-card h3,
+.office-card h3{
+
+    margin:20px 0 12px;
+
+    font-size:24px;
+
+}
+
+.product-card p,
+.video-card p,
+.office-card p{
+
+    margin-bottom:20px;
+
+}
