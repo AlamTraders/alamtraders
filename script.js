@@ -652,3 +652,238 @@ document.addEventListener("keydown",function(e){
     }
 
 });
+/*====================================
+        COUNTER ON SCROLL
+=====================================*/
+
+function startCountersOnScroll() {
+
+    const counters = document.querySelectorAll(".counter");
+
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const counter = entry.target;
+
+            const target = Number(counter.dataset.target);
+
+            let current = 0;
+
+            const step = Math.ceil(target / 100);
+
+            const timer = setInterval(() => {
+
+                current += step;
+
+                if (current >= target) {
+
+                    counter.textContent = target + "+";
+
+                    clearInterval(timer);
+
+                } else {
+
+                    counter.textContent = current;
+
+                }
+
+            }, 20);
+
+            observer.unobserve(counter);
+
+        });
+
+    }, {
+
+        threshold: 0.5
+
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+
+}
+
+startCountersOnScroll();
+
+
+
+
+
+/*====================================
+        CURRENT PAGE ACTIVE MENU
+=====================================*/
+
+function currentPageActive() {
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".navbar a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (href === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+currentPageActive();
+
+
+
+
+
+/*====================================
+        IMAGE LAZY LOADING
+=====================================*/
+
+function lazyImages() {
+
+    const images = document.querySelectorAll("img[data-src]");
+
+    if (!images.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const img = entry.target;
+
+            img.src = img.dataset.src;
+
+            img.removeAttribute("data-src");
+
+            observer.unobserve(img);
+
+        });
+
+    });
+
+    images.forEach(img => observer.observe(img));
+
+}
+
+lazyImages();
+
+
+
+
+
+/*====================================
+        COPY EMAIL
+=====================================*/
+
+function copyEmail(email) {
+
+    navigator.clipboard.writeText(email);
+
+    alert("Email copied successfully.");
+
+}
+
+
+
+
+
+/*====================================
+        COPY PHONE
+=====================================*/
+
+function copyPhone(number) {
+
+    navigator.clipboard.writeText(number);
+
+    alert("Phone number copied successfully.");
+
+}
+
+
+
+
+
+/*====================================
+        WHATSAPP MESSAGE
+=====================================*/
+
+function openWhatsApp() {
+
+    const message = encodeURIComponent(
+
+        "Hello Alam Traders, I need information regarding wooden pallets."
+
+    );
+
+    window.open(
+
+        "https://wa.me/919967186786?text=" + message,
+
+        "_blank"
+
+    );
+
+}
+
+
+
+
+
+/*====================================
+        SCROLL PROGRESS BAR
+=====================================*/
+
+const progressBar = document.createElement("div");
+
+progressBar.style.position = "fixed";
+
+progressBar.style.left = "0";
+
+progressBar.style.top = "0";
+
+progressBar.style.width = "0";
+
+progressBar.style.height = "4px";
+
+progressBar.style.background = "#c62828";
+
+progressBar.style.zIndex = "99999";
+
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+
+    const scroll = window.scrollY;
+
+    const height = document.documentElement.scrollHeight -
+
+                   window.innerHeight;
+
+    const progress = (scroll / height) * 100;
+
+    progressBar.style.width = progress + "%";
+
+});
+
+
+
+
+
+/*====================================
+        PERFORMANCE
+=====================================*/
+
+window.addEventListener("pageshow", () => {
+
+    document.body.classList.remove("loading");
+
+});
