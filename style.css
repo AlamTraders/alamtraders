@@ -3948,3 +3948,426 @@ textarea{
     transform .3s ease;
 
 }
+/*====================================
+        PREMIUM SCROLLBAR
+=====================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f3f3f3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+
+
+/*====================================
+        TEXT SELECTION
+=====================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+
+
+/*====================================
+        FOCUS STYLES
+=====================================*/
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:3px solid rgba(198,40,40,.25);
+
+    outline-offset:3px;
+
+}
+
+
+
+
+
+/*====================================
+        GLASS EFFECT
+=====================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+
+
+/*====================================
+        SHADOW UTILITIES
+=====================================*/
+
+.shadow-sm{
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.shadow{
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.shadow-lg{
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+
+
+
+
+/*====================================
+        BORDER RADIUS UTILITIES
+=====================================*/
+
+.rounded{
+
+    border-radius:var(--radius);
+
+}
+
+.rounded-lg{
+
+    border-radius:20px;
+
+}
+
+.rounded-circle{
+
+    border-radius:50%;
+
+}
+
+
+
+
+
+/*====================================
+        DISPLAY UTILITIES
+=====================================*/
+
+.d-flex{
+
+    display:flex;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+
+
+
+/*====================================
+        SPACING UTILITIES
+=====================================*/
+
+.mt-20{margin-top:20px;}
+
+.mt-40{margin-top:40px;}
+
+.mt-60{margin-top:60px;}
+
+.mb-20{margin-bottom:20px;}
+
+.mb-40{margin-bottom:40px;}
+
+.mb-60{margin-bottom:60px;}
+
+.pt-60{padding-top:60px;}
+
+.pb-60{padding-bottom:60px;}
+
+.p-20{padding:20px;}
+
+.p-30{padding:30px;}
+
+.p-40{padding:40px;}
+
+
+
+
+
+/*====================================
+        IMAGE UTILITIES
+=====================================*/
+
+.img-cover{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.img-contain{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+/*====================================
+        BACKGROUND UTILITIES
+=====================================*/
+
+.bg-light{
+
+    background:var(--light);
+
+}
+
+.bg-dark{
+
+    background:var(--dark);
+
+    color:#fff;
+
+}
+
+.bg-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+
+
+
+/*====================================
+        LOADING STATE
+=====================================*/
+
+.loading{
+
+    pointer-events:none;
+
+    opacity:.7;
+
+}
+
+.loading::after{
+
+    content:"";
+
+    width:18px;
+
+    height:18px;
+
+    margin-left:10px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    border-top-color:#fff;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    animation:rotate360 .7s linear infinite;
+
+}
+
+
+
+
+
+/*====================================
+        LAZY IMAGE SUPPORT
+=====================================*/
+
+img{
+
+    image-rendering:auto;
+
+}
+
+img[loading="lazy"]{
+
+    opacity:1;
+
+}
+
+
+
+
+
+/*====================================
+        PRINT
+=====================================*/
+
+@media print{
+
+    .top-bar,
+
+    .header,
+
+    .footer,
+
+    .floating-buttons,
+
+    .cta,
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        REDUCED MOTION
+=====================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+
+
+
+
+/*====================================
+        PERFORMANCE
+=====================================*/
+
+.hero,
+
+.gallery-item,
+
+.video-card,
+
+.product-card,
+
+.cta{
+
+    will-change:transform;
+
+}
+
+
+
+
+
+/*====================================
+        END OF STYLESHEET
+=====================================*/
