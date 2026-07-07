@@ -3010,3 +3010,452 @@ textarea{
     transition:all .3s ease;
 
 }
+/*==================================================
+        ALAM TRADERS RESPONSIVE CSS
+==================================================*/
+
+
+
+
+
+/*====================================
+        LARGE LAPTOP
+=====================================*/
+
+@media (max-width:1200px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero-title{
+
+    font-size:54px;
+
+}
+
+.section-title{
+
+    font-size:40px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+
+
+/*====================================
+        TABLET
+=====================================*/
+
+@media (max-width:992px){
+
+.section-padding{
+
+    padding:80px 0;
+
+}
+
+.hero .container,
+
+.about-wrapper,
+
+.manufacturing-wrapper,
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding:100px 0;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-features{
+
+    justify-content:center;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.values-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.form-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.mission-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+
+
+/*====================================
+        MOBILE MENU
+=====================================*/
+
+@media (max-width:768px){
+
+.top-bar{
+
+    display:none;
+
+}
+
+.header .container{
+
+    min-height:75px;
+
+}
+
+.logo img{
+
+    width:150px;
+
+}
+
+.navbar{
+
+    position:fixed;
+
+    top:75px;
+
+    left:-100%;
+
+    width:100%;
+
+    height:calc(100vh - 75px);
+
+    background:#fff;
+
+    transition:.35s;
+
+    padding:40px 30px;
+
+    overflow-y:auto;
+
+}
+
+.navbar.active{
+
+    left:0;
+
+}
+
+.navbar ul{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.btn-quote{
+
+    display:none;
+
+}
+
+.hero-title{
+
+    font-size:40px;
+
+}
+
+.section-title{
+
+    font-size:34px;
+
+}
+
+.page-banner{
+
+    padding:70px 0;
+
+}
+
+.page-banner h1{
+
+    font-size:38px;
+
+}
+
+.cta-wrapper{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.cta-buttons{
+
+    justify-content:center;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.products-grid,
+
+.gallery-grid,
+
+.video-grid,
+
+.office-grid,
+
+.categories-grid,
+
+.industries-grid,
+
+.process-grid,
+
+.strength-grid,
+
+.highlights-grid,
+
+.certificate-grid,
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+
+
+/*====================================
+        SMALL MOBILE
+=====================================*/
+
+@media (max-width:576px){
+
+.section-padding{
+
+    padding:65px 0;
+
+}
+
+.hero{
+
+    padding:80px 0;
+
+}
+
+.hero-title{
+
+    font-size:32px;
+
+    line-height:1.25;
+
+}
+
+.hero-description{
+
+    font-size:16px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+    width:100%;
+
+}
+
+.section-title{
+
+    font-size:28px;
+
+}
+
+.section-description{
+
+    font-size:16px;
+
+}
+
+.page-banner h1{
+
+    font-size:30px;
+
+}
+
+.contact-form,
+
+.quote-form,
+
+.mission-card,
+
+.value-card,
+
+.product-card,
+
+.office-card,
+
+.info-card,
+
+.testimonial-card,
+
+.certificate-card{
+
+    padding:25px;
+
+}
+
+.gallery-item img{
+
+    height:220px;
+
+}
+
+.video-card img{
+
+    height:210px;
+
+}
+
+.floating-buttons{
+
+    right:15px;
+
+    bottom:15px;
+
+}
+
+.floating-whatsapp,
+
+.floating-call,
+
+.back-to-top{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:20px;
+
+}
+
+}
+
+
+
+
+
+/*====================================
+        EXTRA SMALL DEVICES
+=====================================*/
+
+@media (max-width:360px){
+
+.hero-title{
+
+    font-size:28px;
+
+}
+
+.section-title{
+
+    font-size:24px;
+
+}
+
+.logo img{
+
+    width:135px;
+
+}
+
+.page-banner h1{
+
+    font-size:26px;
+
+}
+
+}
